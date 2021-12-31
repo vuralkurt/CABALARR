@@ -4,6 +4,7 @@ package GUNUN_SORUSU;
 //NEREDEN BILEYIMM
 //HADI HADI BILIRSIN SENN
 //NE BILECEM OGLUM BENN
+//BU GEYIK UZAR GIDER BÖYLE
     class A{
       public A(){
             System.out.println("A");
