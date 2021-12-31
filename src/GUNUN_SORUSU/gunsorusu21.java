@@ -1,6 +1,6 @@
 package GUNUN_SORUSU;
 
-
+//NELER OLUYOR YAV
     class A{
       public A(){
             System.out.println("A");
