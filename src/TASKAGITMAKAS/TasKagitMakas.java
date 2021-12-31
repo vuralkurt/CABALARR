@@ -6,7 +6,7 @@ public class TasKagitMakas {
 
     public static void main(String[] args) {
 
-        Scanner s = new Scanner(System.in);
+        Scanner s = new Scanner(System.in);         //GÜZEL OYUN
 
         int kul_puan =0;
         int bil_puan=0;
