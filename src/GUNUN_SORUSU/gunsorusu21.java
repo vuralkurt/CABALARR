@@ -3,6 +3,7 @@ package GUNUN_SORUSU;
 //NELER OLUYOR YAV
 //NEREDEN BILEYIMM
 //HADI HADI BILIRSIN SENN
+//NE BILECEM OGLUM BENN
     class A{
       public A(){
             System.out.println("A");
