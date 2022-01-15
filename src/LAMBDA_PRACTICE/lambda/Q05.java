@@ -1,26 +1,42 @@
 package LAMBDA_PRACTICE.lambda;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Q05 {
-        //         {"A", "B", "D", "C", "B", "A", "A", "B", "B"} gibi bir array oluşturun;
-        //         Tekrarlanan öğeleri konsolda yazdırın
+    //         {"A", "B", "D", "C", "B", "A", "A", "B", "B"} gibi bir array oluşturun;
+    //         Tekrarlanan öğeleri konsolda yazdırın
+
+
+    static List<String> list = new ArrayList<>(Arrays.asList("A", "B", "D", "C", "B", "A", "A", "B", "B"));
 
     public static void main(String[] args) {
-
-        String aar[]={"A","B","C","B","A","A","B","B","D"};
-        a1(aar);
-
+        tekrarliOgeYaz();
     }
 
-    public static void  a1(String[] aar){
-
-       //  Arrays.stream(aar).filter(t->t.count()>=2).forEach(Q05::yaz);
-
+    public static boolean tekrarliOlanBul(String t) {
+        int count = 0;
+        boolean varMi = false;
+        for (int i = 0; i < list.size(); i++) {
+            count = 0;
+            if (t.equals(list.get(i))) {
+                count++;
+            }
+            if (count > 0) {
+                varMi = true;
+                break;
+            }
+        }
+        return varMi;
     }
 
-    public static void yaz(String t){
-        System.out.println(t+" ");
+    //    Task 01 ->      Tekrarlanan öğeleri konsolda yazdırın
+    public static void tekrarliOgeYaz() {
+        list.
+                stream().
+                filter(Q05::tekrarliOlanBul).
+                distinct().
+                forEach(t -> System.out.print(t + " "));
     }
-
 }

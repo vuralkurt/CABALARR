@@ -46,6 +46,7 @@ public class Oyun {
         int tahmin=0;
         int dogru=0;
         String str="";
+
         do {
             str="";
             System.out.println("yanlis / tahmin sayisi: "+(tahmin-dogru)+"/"+(2*(film.get(index).length())));
