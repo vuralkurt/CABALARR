@@ -1,4 +1,4 @@
-package MayinTarlasi;
+package Mayin;
 
 import java.util.Scanner;
 
@@ -8,12 +8,14 @@ public class Main {
 
         System.out.println("Mayin tarlasina hosgeldiniz");
         System.out.println("Lutfen oynamak istediginiz boyutlari giriniz");
-        int satirSayisi,sutunSayisi;
+        int satirSayisi, sutunSayisi;
 
-        satirSayisi= scan.nextInt();
-        sutunSayisi= scan.nextInt();
 
-        Mayin_Tarlasi mayin =new Mayin_Tarlasi(satirSayisi,sutunSayisi);
+        satirSayisi = scan.nextInt();
+        sutunSayisi = scan.nextInt();
+
+
+        Mayin_Tarlasi mayin = new Mayin_Tarlasi(satirSayisi, sutunSayisi);
 
         mayin.run();
 
