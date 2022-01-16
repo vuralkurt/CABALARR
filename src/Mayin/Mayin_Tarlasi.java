@@ -7,16 +7,17 @@ import java.util.Scanner;
 
 public class Mayin_Tarlasi {
 
+    // Variables olusturuldu.
     int satirSayisi, sutunSayisi, size;
     int harita[][];
     int board[][];
     boolean game = true;
 
-
+    // Random ve veri almak icin
     Random random = new Random();
     Scanner scan = new Scanner(System.in);
 
-
+    // Parametreli constractor
     public Mayin_Tarlasi(int satirSayisi, int sutunSayisi) {
 
         this.satirSayisi = satirSayisi;
@@ -26,34 +27,43 @@ public class Mayin_Tarlasi {
         this.size = satirSayisi * sutunSayisi;
     }
 
+
+    // Run methodu create edildi.
     public void run() {
+        // Gerekli method ici variables
         int row, col,success = 0;
+
+        //Kullanilacak method
         prepareGame();
-        // baski(harita);
+
+
         System.out.println("Oyun basladi");
 
         while (game) {
 
             baski(harita);
-            System.out.println("Satir");
+            //Kullanicidan veri girisi
+            System.out.println("Satir giriniz");
             row = scan.nextInt();
-            System.out.println("Sutun");
+            System.out.println("Sutun giriniz");
             col = scan.nextInt();
-
-            if(row<0 || row>=satirSayisi){
+            // Gecersiz koordinat sarti
+            if(row < 0 || row >= satirSayisi){
                 System.out.println("Gecersiz koordinat");
                 continue;
             }
-            if(col<0 || col>=sutunSayisi){
+            if(col < 0 || col >= sutunSayisi){
                 System.out.println("Gecersiz koordinat");
                 continue;
             }
 
+            //Mayina basmadan basari
             if (harita[row][col] != -1) {
                 checkMayin(row, col);
                 success++;
+
                 if (success==(size-(size/4))){
-                    System.out.println("Mayina basmadin");
+                    System.out.println("TEBRIKLER !!"+"\n"+"Mayina basmadin");
                     break;
                 }
             } else {
@@ -66,6 +76,7 @@ public class Mayin_Tarlasi {
 
     }
 
+    //Etrafataki mayinlari gösterme
     private void checkMayin(int r, int c) {
         if (harita[r][c] == 0) {
 
@@ -88,16 +99,19 @@ public class Mayin_Tarlasi {
         }
     }
 
+    //Bu methodla mayinlar araziye yerlestirilir
     public void prepareGame() {
-
+        //Kullanilacak variables
         int randSatir, randSutun, count = 0;
 
+        //While ile yerlestirilecek mayinlarin sayisi kontrol edilir
         while (count != (size / 4)) {
 
             randSatir = random.nextInt(satirSayisi);
             randSutun = random.nextInt(sutunSayisi);
 
             if (harita[randSatir][randSutun] != -1) {
+
                 harita[randSatir][randSutun] = -1;
                 count++;
 
@@ -106,7 +120,7 @@ public class Mayin_Tarlasi {
         }
 
     }
-
+    //Mayinlarin arazideki yerlesimini kontrol etme
     public void baski(int aar[][]) {
 
         for (int i = 0; i < aar.length; i++) {
