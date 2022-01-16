@@ -104,7 +104,7 @@ public class Mayin_Tarlasi {
         //Kullanilacak variables
         int randSatir, randSutun, count = 0;
 
-        //While ile yerlestirilecek mayinlarin sayisi kontrol edilir
+        //While ile yerlestirilecek mayinlarin sayisi kontrol edilir==
         while (count != (size / 4)) {
 
             randSatir = random.nextInt(satirSayisi);
