@@ -99,7 +99,7 @@ public class Mayin_Tarlasi {
         }
     }
 
-    //Bu methodla mayinlar araziye yerlestirilir
+    //Bu methodla mayinlar araziye yerlestirilir==
     public void prepareGame() {
         //Kullanilacak variables
         int randSatir, randSutun, count = 0;
