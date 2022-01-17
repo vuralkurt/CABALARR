@@ -120,7 +120,7 @@ public class Mayin_Tarlasi {
         }
 
     }
-    //Mayinlarin arazideki yerlesimini kontrol etme==
+    //Mayinlarin arazideki yerlesimini kontrol etme====
     public void baski(int aar[][]) {
 
         for (int i = 0; i < aar.length; i++) {
