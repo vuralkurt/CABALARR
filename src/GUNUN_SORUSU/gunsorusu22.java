@@ -10,5 +10,7 @@ public class gunsorusu22 {
             System.out.println(x+":");
 
         }
+
+        ///BITTI
     }
 }
