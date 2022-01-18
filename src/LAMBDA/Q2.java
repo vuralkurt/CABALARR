@@ -51,6 +51,7 @@ class Lambda02 {
         a3(list);
     }
 
+    //================================================================================================
     //List'in cift olan elemanlarin karelerini aliniz ve en buyugunu yazdiriniz
     public static void ciftKareMax(List<Integer> list) {
         // Optional<Integer> maxEl = list.stream().filter(Lambda01::ciftBul).map(t -> t * t).reduce(Integer::max);
@@ -63,6 +64,9 @@ class Lambda02 {
         System.out.println(maxEl);
     }
 
+
+    //==============================================================================================
+
     //List'teki tum elemanlarin toplamini yazdiriniz.
     //LAmbda Expression...
     public static void toplaEl1(List<Integer> list) {
@@ -72,9 +76,13 @@ class Lambda02 {
         y her zaman degerini list.stream()'den alır(akis)
         x ilk degerden sonraki degerlerini islemden alir
        */
+
         System.out.println(toplam);
         // System.out.println(list.stream().reduce(0,(x, y) -> x + y));
     }
+
+
+    //===============================================================================================
 
     //List'teki tum elemanlarin toplamini yazdiriniz.
     //Method Reference...
@@ -91,12 +99,21 @@ class Lambda02 {
         // System.out.println(list.stream().reduce(0,(x, y) -> x + y));
     }
 
+
+    //==============================================================================================
+
+
     //List'teki cift elemanlarin carpimini  yazdiriniz.
     //Method Reference...
+
     public static void carpCiftEl1(List<Integer> list) {
         Optional<Integer> carp = list.stream().filter(Lambda01::ciftBul).reduce(Math::multiplyExact);
         System.out.println(carp);
     }
+
+
+    //===============================================================================================
+
 
     //List'teki cift elemanlarin carpimini yazdiriniz.
     //Lambda expression...
