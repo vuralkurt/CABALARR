@@ -1,10 +1,12 @@
 package LAMBDA;
 
 public class TechPro {
+
     private String batch;
     private String batchName;
     private  int batchOrt;
     private int ogrcSayisi;
+
 
     public TechPro(String batch, String batchName, int batchOrt, int ogrcSayisi) {
         this.batch = batch;

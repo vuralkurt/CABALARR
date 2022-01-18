@@ -100,43 +100,58 @@ class Lambda02 {
     }
 
 
-    //==============================================================================================
+    //==============================================================================================0======
 
 
     //List'teki cift elemanlarin carpimini  yazdiriniz.
     //Method Reference...
 
     public static void carpCiftEl1(List<Integer> list) {
+
         Optional<Integer> carp = list.stream().filter(Lambda01::ciftBul).reduce(Math::multiplyExact);
         System.out.println(carp);
+
     }
 
 
     //===============================================================================================
 
 
+
     //List'teki cift elemanlarin carpimini yazdiriniz.
     //Lambda expression...
+
     public static void carpCiftEl2(List<Integer> list) {
+
         Integer carp = list.stream().filter(Lambda01::ciftBul).reduce(1, (x, y) -> (x * y));
+
         //pozitif deger uretiniz
         Integer carpPoz = list.stream().filter(Lambda01::ciftBul).reduce(-1, (x, y) -> (x * y));
+
         System.out.println(carp);
         System.out.println(carpPoz);
     }
 
+
+
+    //==================================================================================================
+
+
     //List'teki elemanlardan en kucugunu 4 farklı yontem ile yazdiriniz
+
     //1. yontem Method Reference --> Integer class
     public static void min1(List<Integer> list) {
         Optional<Integer> min = list.stream().reduce(Integer::min);
         System.out.println(min);
     }
 
+
     //2. yontem Method Reference --> Math class
     public static void min2(List<Integer> list) {
         Optional<Integer> min = list.stream().reduce(Math::min);
         System.out.println(min);
     }
+
 
     //3. yontem Method Reference --> Haluk class
 
@@ -148,16 +163,27 @@ class Lambda02 {
         Optional<Integer> min = list.stream().reduce(Lambda02::minBul);
         System.out.println(min);
     }
+
+
     //4. yontem Lambda Expression
     public static void min4(List<Integer> list) {
         Integer  min = list.stream().reduce(Integer.MAX_VALUE,(x,y)->x<y?x:y);
         System.out.println(min);
     }
 
+
+   //===================================================================================
+
+
     //List'teki 15'ten buyuk en kucvuk tek sayiyi yazdiriniz
+
     public static void  a1(List<Integer> list){
         System.out.println(list.stream().filter(t -> t % 2 == 1 & t > 15).reduce(Integer::min));
     }
+
+
+    //=======================================================================================
+
 
 
     //list'in cift  elemanlarinin kareleri ni buykten kucuge yazdiriniz
@@ -166,6 +192,10 @@ class Lambda02 {
         list.stream().filter(Lambda01::ciftBul).map(t -> t * t).sorted().forEach(Lambda01::printEl);
 
     }
+
+
+    //======================================================================================
+
 
     //list'in tek  elemanlarinin kareleri ni buykten kucuge  yazdiriniz
 

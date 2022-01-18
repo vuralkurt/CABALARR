@@ -62,8 +62,10 @@ public class Q3 {
     ilkElemanHarisSonHarfSirali( list);
 
 }
+  //===========================================================================================
 
     //List elemanlarini alafabetik buyuk harf ve  tekrarsiz yazdiriniz
+
     public static void bykHrfTekrarsizSira(List<String> list) {
         list.
                 stream().//akisa girdi
@@ -75,7 +77,11 @@ public class Q3 {
         //EMRE EMİNE KADER MEHMET NİLGUN YILDIZ İSLAM
     }
 
+
+    //=====================================================================================
+
     //list elelmanlarinin character sayisini ters sirali olarak tekrarsiz yazdiriniz
+
     public static void karakterSayisiTekrarsizTersSirali(List<String> list) {
         list.
                 stream().
@@ -85,6 +91,8 @@ public class Q3 {
                 forEach(Lambda01::printEl);//yazdirildi
     }
 
+    //==========================================================================
+
     //List elemanlarini character sayisina gore kckten byk e gore yazdiriniz.
     public static void karakterSayisiSiraliEl(List<String> list) {
         list.
@@ -92,6 +100,8 @@ public class Q3 {
                 sorted(Comparator.comparing(t -> t.length())).//eleman character  sayisina gore ozel siralama yapildi
                 forEach(t -> System.out.print(t + " "));
     }
+
+    //========================================================================
 
     //list elemanlarinin son harfine gore ters sirali yazdiriniz
     public static void sonHarfTersSiraliEl(List<String> list) {
@@ -103,6 +113,8 @@ public class Q3 {
                                 reversed()).//elemanin length()-1)-->son inedx'inin karakterini ters siralar z->a
                 forEach(t -> System.out.print(t + " "));
     }
+
+    //================================================================================
 
     //listin elemanlarin karakterlerinin cift sayili  karelerini hesaplayan,ve karelerini tekrarsiz buyukten kucuge sirali  yaziniz.
     public static void ciftKareTekrarsizTersSira(List<String> list) {
@@ -116,6 +128,8 @@ public class Q3 {
                 forEach(Lambda01::printEl);//yazdirilidiş
 
     }
+
+    //==============================================================================
 
     //List elelmmalarinin karakter sayisini 7 ve 7 'den az olma durumunu kontrol ediniz
     public static void harfSayisi7Kontrol(List<String> list) {
@@ -131,6 +145,8 @@ public class Q3 {
         System.out.println(list.stream().allMatch(t -> t.length() <= 7) ? "list elemanlari 7 harfden buyuk degil" : "AGAM list elemanlari 7 harfden BUYUK ");
     }
 
+    //===============================================================================
+
     //List elelmanlarinin "W" ile baslamasını kontrol ediniz
     public static void wBaslamaKontrol(List<String> list) {
         System.out.println(list.
@@ -140,16 +156,23 @@ public class Q3 {
 
     }
 
+    //===============================================================================
+
     //List elelmanlarinin "x" ile biten en az bir elemaı kontrol ediniz
     public static void xbitmeKontrol(List<String> list) {
         System.out.println(list.
                 stream().
                 anyMatch(t -> t.endsWith("x")) ? "x ile biten isim kimse ayaga kalksin" : "AGAM x ile biten isim oluuuurrr ");
-//anyMatch() --> enaz bir eleman sarti saglarsa true aksi durumda false return eder
-//allMatch() --> tum  elemanlar sarti saglarsa true en az bir eleman sarti saglamazsa false return eder.
-//noneMatch() --> hic bir sarti SAGLAMAZSA true en az bir eleman sarti SAGLARSA false return eder.
+
+
+
+        //anyMatch() --> enaz bir eleman sarti saglarsa true aksi durumda false return eder
+        //allMatch() --> tum  elemanlar sarti saglarsa true en az bir eleman sarti saglamazsa false return eder.
+        //noneMatch() --> hic bir sarti SAGLAMAZSA true en az bir eleman sarti SAGLARSA false return eder.
 
     }
+
+    //===================================================================================
 
     //Karakter sayisi en buyuk elemani yazdiriniz.
     public static void karakteriEnBuyukEl(List<String> list) {
@@ -161,6 +184,9 @@ public class Q3 {
 
     }
 
+
+    //====================================================================================
+
     public static void karakteriEnBuyukEl2(List<String> list) {
         Stream<String> sonIsim = list.
                 stream().
@@ -168,8 +194,13 @@ public class Q3 {
                         reversed()).//ters sirlad b->k
                 //  findFirst());//ilk elelmani aldi
                         limit(1);//limit(a) akısdan cıkan elemanları a parametresine dore ilk a elamanı alır
+
         System.out.println(Arrays.toString(sonIsim.toArray()));
+
     }
+
+
+    //=====================================================================================
 
     //list elemanlarini son harfine göre siralayıp ilk eleman hariç kalan elemanlari yazdiriniz
     public static void ilkElemanHarisSonHarfSirali(List<String> list) {
