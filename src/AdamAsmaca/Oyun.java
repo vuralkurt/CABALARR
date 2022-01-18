@@ -59,7 +59,7 @@ public class Oyun {
                 System.out.println(str+" harfi zaten acilmis!");
             }
 
-
+//================================================
 
             for (int i = 0; i < isim.length(); i++) {
 
